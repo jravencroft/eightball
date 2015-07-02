@@ -27,8 +27,7 @@ func config() {
 
 func handler(w http.ResponseWriter, r *http.Request) {
 	random := rand.New(rand.NewSource(time.Now().Unix()))
-	fmt.Fprint(w, random.Intn(len(messages) - 1))
-	fmt.Fprint(w, messages[0])
+	fmt.Fprint(w, messages[random.Intn(len(messages) - 1)])
 }
 
 func fillmessages(count int) []string{
