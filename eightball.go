@@ -12,11 +12,6 @@ var port string = ""
 var path string = ""
 var messages []string 
 
-type Object struct {
-	key   string
-	value []byte
-}
-
 func config() {
 	flag.BoolVar(&debug, "debug", false, "display debug information")
 	flag.BoolVar(&nocache, "nocache", false, "disable content cache")
